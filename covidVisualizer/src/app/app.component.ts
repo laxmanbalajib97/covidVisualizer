@@ -17,7 +17,10 @@ export class AppComponent {
       let ctx = document.getElementById('myChart');
 
       let US_data = res['US'].map((res) => res.confirmed);
-      let Date_data = res['US'].map((res) => res.date);
+
+      //slice only month and day
+      //everyone knows its 2020
+      let Date_data = res['US'].map((res) => res.date.slice(5));
 
       this.chart = new Chart(ctx, {
         type: 'line',
