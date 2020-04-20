@@ -25,7 +25,11 @@ export class AppComponent {
           labels: Date_data,
           datasets: [
             {
+              label: 'US Covid cases confirmed',
               data: US_data,
+              fill: false,
+              backgroundColor: 'rgb(25,118,210)',
+              borderColor: 'rgba(25,118,210,0.7)',
             },
           ],
         },
