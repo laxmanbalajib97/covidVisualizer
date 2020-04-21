@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Chart } from 'chart.js';
 import { CovidDataService } from '../covid-data.service';
 
 @Component({
-  selector: 'app-us-covid-data',
-  templateUrl: './us-covid-data.component.html',
-  styleUrls: ['./us-covid-data.component.css'],
+  selector: 'app-us-data-deaths',
+  templateUrl: './us-data-deaths.component.html',
+  styleUrls: ['./us-data-deaths.component.css'],
 })
-export class UsCovidDataComponent implements OnInit {
+export class UsDataDeathsComponent implements OnInit {
   chart = []; // This will hold our chart info
 
   constructor(private _coviddata: CovidDataService) {}
 
   ngOnInit() {
     this._coviddata.timeSeriesCovidData().subscribe((res) => {
-      let ctx = document.getElementById('myChart');
+      let ctx = document.getElementById('deathsChart');
 
       let usDataCasesConfirmed = res['US'].map((res) => res.confirmed);
       let usDataCasesDeaths = res['US'].map((res) => res.deaths);
@@ -36,11 +35,11 @@ export class UsCovidDataComponent implements OnInit {
           labels: Date_data,
           datasets: [
             {
-              label: 'Confirmed',
-              data: usDataCasesConfirmed,
+              label: 'Deaths',
+              data: usDataCasesDeaths,
               fill: false,
-              backgroundColor: 'rgb(25,118,210)',
-              borderColor: 'rgba(25,118,210,0.5)',
+              backgroundColor: 'rgb(196,29,43)',
+              borderColor: 'rgba(196,29,43,0.5)',
             },
           ],
         },
