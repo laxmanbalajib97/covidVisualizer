@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "covidvisualizer-4777f": {
+      "hosting": {
+        "covidVisualizer": [
+          "covidvisualizer-4777f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "covidvisualizer-4777f"
+  }
+}
