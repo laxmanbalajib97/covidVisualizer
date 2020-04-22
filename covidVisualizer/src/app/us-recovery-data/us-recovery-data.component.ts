@@ -27,14 +27,14 @@ export class UsRecoveryDataComponent implements OnInit {
         type: 'line',
         options: {
           legend: {
-            display: false,
+            display: true,
           },
         },
         data: {
           labels: Date_data,
           datasets: [
             {
-              label: 'Deaths',
+              label: 'Recovered',
               data: usDataCasesRecovered,
               fill: false,
               backgroundColor: 'rgb(50,205,50)',

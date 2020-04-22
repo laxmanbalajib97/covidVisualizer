@@ -28,7 +28,7 @@ export class UsDataDeathsComponent implements OnInit {
         type: 'line',
         options: {
           legend: {
-            display: false,
+            display: true,
           },
         },
         data: {

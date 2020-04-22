@@ -23,3 +23,17 @@ Before we get started, keep in mind:
 
   * You are initializing in an existing Firebase project directory
 
+[debug] [2020-04-22T03:51:40.543Z] Error: write EIO
+    at afterWriteDispatched (internal/stream_base_commons.js:154:25)
+    at writeGeneric (internal/stream_base_commons.js:145:3)
+    at WriteStream.Socket._writeGeneric (net.js:780:11)
+    at WriteStream.Socket._write (net.js:792:8)
+    at doWrite (_stream_writable.js:441:12)
+    at writeOrBuffer (_stream_writable.js:425:5)
+    at WriteStream.Writable.write (_stream_writable.js:316:11)
+    at EventEmitter.signalExit.alwaysLast (/usr/local/lib/node_modules/firebase-tools/node_modules/restore-cursor/index.js:7:18)
+    at EventEmitter.emit (events.js:311:20)
+    at EventEmitter.emit (domain.js:482:12)
+    at emit (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:78:11)
+    at process.listener (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:94:7)
+    at process.emit (events.js:311:20)

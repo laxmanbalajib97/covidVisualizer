@@ -29,14 +29,14 @@ export class UsCovidDataComponent implements OnInit {
         type: 'line',
         options: {
           legend: {
-            display: false,
+            display: true,
           },
         },
         data: {
           labels: Date_data,
           datasets: [
             {
-              label: 'Confirmed',
+              label: 'Cases Confirmed',
               data: usDataCasesConfirmed,
               fill: false,
               backgroundColor: 'rgb(25,118,210)',

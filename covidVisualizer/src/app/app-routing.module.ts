@@ -9,9 +9,10 @@ const routes: Routes = [
     path: 'confirmed',
     component: UsCovidDataComponent,
   },
-  //{ path: '**', component: UsCovidDataComponent },
+
   { path: 'deaths', component: UsDataDeathsComponent },
   { path: 'recovery', component: UsRecoveryDataComponent },
+  { path: '**', component: UsCovidDataComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
