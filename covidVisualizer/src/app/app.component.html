@@ -48,15 +48,6 @@
     margin: 0 16px;
   }
 
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo:hover {
-    opacity: 0.8;
-  }
-
   .content {
     display: flex;
     margin: 82px auto 32px;
@@ -64,19 +55,6 @@
     max-width: 960px;
     flex-direction: column;
     align-items: center;
-  }
-
-  svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
-
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
-
-  .card svg.material-icons path {
-    fill: #888;
   }
 
   .card-container {
@@ -204,19 +182,6 @@
       transform: rotate(-5deg);
     }
   }
-  .cb {
-    list-style: none;
-    padding: 10px;
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    border: 1px solid black;
-    border-radius: 5px;
-  }
-
-  .cb-active {
-    background-color: #ffff;
-  }
 </style>
 
 <!-- Toolbar -->
@@ -231,7 +196,7 @@
 </div>
 
 <div class="content" role="main">
-  <!-- Highlight Card -->
+  <!-- TABS for switching between graphs -->
 
   <div class="card-container" ng-app ng-init="tab=1">
     <a class="card" rel="noopener" routerLink="/confirmed">
@@ -244,25 +209,20 @@
       <span>Deaths</span>
     </a>
   </div>
+
   <!-- Chart component routed to display relevant content-->
 
   <router-outlet></router-outlet>
 
-  <!-- 
-      chart canvas-
-
-  <div *ngIf="chart">
-    <canvas id="myChart" width="700" height="500">{{ chart }}</canvas>
-  </div> -->
-
   <!-- Resources -->
-  <!-- Next Steps -->
+
   <h2 class="up-three">COVID 19 Resourses you should check out</h2>
   <div class="card-container">
     <a
       class="card card-smaller"
       href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
     >
+      <!-- CDC logo-->
       <img
         height="40"
         width="140"
@@ -274,6 +234,7 @@
       class="card card-smaller"
       href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
     >
+      <!-- WHO logo-->
       <img
         height="40"
         width="140"

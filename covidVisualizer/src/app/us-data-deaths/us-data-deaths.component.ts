@@ -16,9 +16,7 @@ export class UsDataDeathsComponent implements OnInit {
     this._coviddata.timeSeriesCovidData().subscribe((res) => {
       let ctx = document.getElementById('deathsChart');
 
-      let usDataCasesConfirmed = res['US'].map((res) => res.confirmed);
       let usDataCasesDeaths = res['US'].map((res) => res.deaths);
-      let usDataCasesRecovered = res['US'].map((res) => res.recovered);
 
       //slice only month and day
       //everyone knows its 2020

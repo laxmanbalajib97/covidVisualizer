@@ -7,6 +7,8 @@ import { map } from 'rxjs/operators';
 })
 export class CovidDataService {
   constructor(private _http: HttpClient) {}
+
+  //subscribes to data from COVID19 api hosted by https://github.com/pomber
   timeSeriesCovidData() {
     return this._http
       .get('https://pomber.github.io/covid19/timeseries.json')

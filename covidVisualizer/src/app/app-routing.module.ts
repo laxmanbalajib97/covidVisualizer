@@ -12,6 +12,8 @@ const routes: Routes = [
 
   { path: 'deaths', component: UsDataDeathsComponent },
   { path: 'recovery', component: UsRecoveryDataComponent },
+
+  //by default all undefined routes go to Confirmed Cases component
   { path: '**', component: UsCovidDataComponent },
 ];
 @NgModule({
