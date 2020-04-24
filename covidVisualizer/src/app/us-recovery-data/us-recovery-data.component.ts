@@ -15,8 +15,7 @@ export class UsRecoveryDataComponent implements OnInit {
     this._coviddata.timeSeriesCovidData().subscribe((res) => {
       let ctx = document.getElementById('recoveryChart');
 
-      let usDataCasesConfirmed = res['US'].map((res) => res.confirmed);
-      let usDataCasesDeaths = res['US'].map((res) => res.deaths);
+      //Filter out data about only the cases who have recovered
       let usDataCasesRecovered = res['US'].map((res) => res.recovered);
 
       //slice only month and day

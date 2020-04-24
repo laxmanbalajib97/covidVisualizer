@@ -16,6 +16,7 @@ export class UsDataDeathsComponent implements OnInit {
     this._coviddata.timeSeriesCovidData().subscribe((res) => {
       let ctx = document.getElementById('deathsChart');
 
+      //Filter out data about only the cases of deaths
       let usDataCasesDeaths = res['US'].map((res) => res.deaths);
 
       //slice only month and day
