@@ -107,7 +107,7 @@ Navigate to http://localhost:8000/ on your web browser.
 ## Built With
 
 * [NodeJS](https://nodejs.org/en/docs/) - The JS runtime used
-* [AngularJS](https://angular.io/docs) - The web framework used
+* [Angular](https://angular.io/docs) - The frontend web framework used
 * [Docker](https://docs.docker.com) - The container framework used
 * [ChartJS](https://www.chartjs.org/docs/latest/) - Used to generate charts for visualization
 
